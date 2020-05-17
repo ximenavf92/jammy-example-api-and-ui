@@ -1,17 +1,15 @@
-var inventory = require('./data/inventory.js');
+var inventory = require('./data/inventory.json');
 
 exports.handler = function(event, context, callback) {
-
-  console.log('event.queryStringParameters.productId :>> ', event.queryStringParameters.productId);
 
   // get the inventory details for this product
   let data = inventory[event.queryStringParameters.productId];
 
-  console.log('data :>> ', data);
 
-  callback(null, {
-    statusCode: 200,
-    body: JSON.stringify(data)
-  });
-
+  setTimeout(() => {
+    callback(null, {
+      statusCode: 200,
+      body: JSON.stringify(data)
+    });
+  }, 2000);
 }
