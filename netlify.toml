@@ -1,0 +1,14 @@
+[build]
+  command = "eleventy"
+  functions = "api"
+  publish = "_site"
+
+[dev]
+  command = "eleventy --serve --quiet"
+  functions = "api"
+  publish = "_site"
+
+[[redirects]]
+  from = "/api/stock/:id"
+  to = "/.netlify/functions/stock?productId=:id"
+  status = 200

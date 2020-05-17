@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping site</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="tint">
+    <header>
+      <section>
+        <h1>Perfectly sensible products</h1>
+        <p class="subtitle">Not the prices we want, but the prices we deserve</p>
+      </section>
+    </header>
+  </div>
+  <main>
+    <section>
+
+    {% for sku, item in catalogue %}
+
+      <div class="product" data-product-id="{{ sku }}">
+        <div class="info">
+          <h2>{{ item.name }}</h2>
+          <p class="description">{{ item.description }}</p>
+          <span class="purchase">
+            <a href="#" class="btn">Buy now</a>
+          </span>
+          <span class="price">{{ item.rrp }}</span>
+        </div>
+        <img src="/images/{{ item.image }}" alt="{{ item.name }}">
+      </div>
+
+    {% endfor %}
+
+    </section>
+  </main>
+  <div class="tint">
+    <footer>
+      <section>
+        <h2>Try this for yourself</h2>
+        <p>
+          To quickly experiment with this example, you can click the button below. Clicking the button will clone <a href="https://github.com/netlify/example-site-boilerplate">this site repo</a>, setup a new site <a href="https://netlify.com">on Netlify</a> and deploy the site complete with Netlify's CI/CD pipeline configured and operational.
+        </p>
+        <p>
+          <a class="naked" href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify/example-site-boilerplate"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+        </p>
+      </section>
+      <section>
+        Made with <img class="netliheart" title="love" src="/images/netliheart.svg" alt="love" width="1em"> by the <a href="https://netlify.com">Netlify</a> team. Explore <a href="https://github.com/netlify/example-site-boilerplate">the code</a> in GitHub. Follow <a href="https://twitter.com/netlify">@Netliify</a> on Twitter for regular updates</a>.
+      </section>
+    </footer>
+  </div>
+  <script src="/js/shop.js"></script>
+</body>
+</html>
+

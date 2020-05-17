@@ -1,17 +1,29 @@
-# Example Site Boilerplate
+# Example Site - APIs and UIs
 
-A collection of common content pieces and boilerplate design and assets for use by the Netlify DX team (or anyone, although the content will be rather Netli-centric) when creating example and demo sites.
-
-![A screenshot](screenshot.png)
-
-## Todo
-
-Everything really. We're just breaking ground.
+We can keep APIs and UIs in sync by having the APIs be part of the same repo. Serverless functions are handy for that.
 
 
-## Sample README conventions.
+## Local development
 
-Some common language and descriptions might be useful. What you'll find below this line
+- clone
+- npm i
+- install netlify cli
+- netlify dev
 
----
+## Deploying
 
+- Add as a site om Netlify
+- git push
+
+### Speedy bootstrap
+
+DTN buttons
+
+
+
+## Talk notes
+
+1. Prerender only. No API
+1. Add stock availability API
+1. Add price fluctuations to stock API
+1. Add local currency to stock API
