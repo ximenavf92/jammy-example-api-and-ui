@@ -1,4 +1,4 @@
-var inventory = require( __dirname + '/data/inventory.json');
+var inventory = require('./inventory.json');
 
 exports.handler = function(event, context, callback) {
 
