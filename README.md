@@ -18,12 +18,3 @@ We can keep APIs and UIs in sync by having the APIs be part of the same repo. Se
 ### Speedy bootstrap
 
 DTN buttons
-
-
-
-## Talk notes
-
-1. Prerender only. No API
-1. Add stock availability API
-1. Add price fluctuations to stock API
-1. Add local currency to stock API
