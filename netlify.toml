@@ -11,4 +11,3 @@
 [[redirects]]
   from = "/api/stock/:id"
   to = "/.netlify/functions/stock?productId=:id"
-  status = 200
