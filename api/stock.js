@@ -19,8 +19,6 @@ exports.handler = function(event, context, callback) {
     data.price = data.rrp
   }
 
-  console.log('data :>> ', data);
-
   callback(null, {
     statusCode: 200,
     body: JSON.stringify(data)
