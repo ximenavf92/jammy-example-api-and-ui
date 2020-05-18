@@ -10,12 +10,22 @@ const showStockLevels = function() {
         // levels of available stock
         if(!data.stock) {
           html = `<span>😕More soon!</span> `;
+<<<<<<< HEAD
         } else if (data.stock < 10) {
+=======
+        } else if (data.stock <= 10) {
+>>>>>>> price-gouging
           html = `<a href="#" class="btn">Just a few left! Buy now</a>`;
         } else {
           html = `<a href="#" class="btn">Buy now</a>`;
         }
         element.querySelector('.purchase').innerHTML = html;
+<<<<<<< HEAD
+=======
+
+        // update price
+        element.querySelector('.price').innerText = data.price;
+>>>>>>> price-gouging
 
       })
   });
