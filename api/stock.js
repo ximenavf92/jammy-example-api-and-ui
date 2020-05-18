@@ -4,20 +4,23 @@ var inventory = require('./data/inventory.json');
 exports.handler = (event, context, callback) => {
 
   // get the inventory and price details for this product
-  let data = products[event.queryStringParameters.productId];
+  let catalogueItem = products[event.queryStringParameters.productId];
   let availability = inventory[event.queryStringParameters.productId];
 
-  // add the availabulity to the data passed back
+  // Create a data object to pass back to the UI
+  let data = {};
+
+  // add the availability to the data passed back
   data.stock = availability.stock;
 
   // Introduce outrageous price gauging.
   if(availability.stock == 0) {
-    data.price = data.rrp
+    data.price = catalogueItem.rrp
   }
   else if(availability.stock < 10) {
-    data.price = ((10 - availability.stock) * data.rrp ).toFixed(2);
+    data.price = ((10 - availability.stock) * catalogueItem.rrp ).toFixed(2);
   } else {
-    data.price = data.rrp
+    data.price = catalogueItem.rrp
   }
 
 
