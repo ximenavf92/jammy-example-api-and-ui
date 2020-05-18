@@ -21,14 +21,11 @@ exports.handler = (event, context, callback) => {
     data.price = data.rrp
   }
 
+  // Send the response
+  callback(null, {
+    statusCode: 200,
+    body: JSON.stringify(data)
+  });
 
-  // add some fake latency,
-  // so we can see what's going on.
-  setTimeout(() => {
-    callback(null, {
-      statusCode: 200,
-      body: JSON.stringify(data)
-    });
-  }, 2000)
 
 }
