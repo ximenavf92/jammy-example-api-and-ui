@@ -10,7 +10,7 @@ exports.handler = (event, context, callback) => {
   // Create a data object to pass back to the UI
   let data = {};
 
-  // add the availability to the data passed back
+  // add the stock availability to the data passed back
   data.stock = availability.stock;
 
   // Introduce outrageous price gauging.
