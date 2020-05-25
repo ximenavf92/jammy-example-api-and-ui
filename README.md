@@ -31,5 +31,5 @@ netlify dev
 
  To quickly experiment with this example, you can click the button below. Clicking the button will clone <a href="https://github.com/philhawksworth/example-api-and-ui">this site repo</a>, setup a new site <a href="https://netlify.com">on Netlify</a> and deploy the site complete with Netlify's CI/CD pipeline configured and operational.
 
- [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/example-api-and-ui&utm_source=github&utm_medium=smashingmeets-example-pnh&utm_campaign=devex)
+ [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/example-api-and-ui&utm_source=github-dtn&utm_medium=api-ui-example-pnh&utm_campaign=devex)
 
