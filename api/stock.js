@@ -1,3 +1,4 @@
+var products = require('./data/catalogue.json');
 var inventory = require('./data/inventory.json');
 
 exports.handler = (event, context, callback) => {
